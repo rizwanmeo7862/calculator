@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<title>Calculater 🖩</title>
+</head>
+<body class="center content-center	 items-center">
+
+    <!-- <h1>Calculator 🖩</h1> -->
+
+
+	<div class="flex items-center justify-center  h-screen  shadow shadow-blue-500/40 hover:shadow-indigo-500/40">
+		<form class=" w-96 max-w-sm rounded center content-center shadow-2xl px-4 py-4" id="myform" name="calc">
+		<input id="myinput" class="w-full px-4 rounded border-2 py-1 border-black text-center bg-gray font-bold   text-black text-5xl flex" type="" disabled name="display" placeholder="0.0"><br> 
+	    <div class="flex w-full justify-between divide-y divide-current">
+		    <input class="bg-black py-5 px-8 text-3xl rounded text-white cursor-pointer " type="button"  name="" value="0" onclick="calc.display.value+='0'">
+		    <input class="bg-black py-5 px-8 rounded text-3xl text-white cursor-pointer" type="button" name="" value="1" onclick="calc.display.value+='1'">
+		    <input class="bg-black py-5 px-8 rounded text-3xl text-white cursor-pointer" type="button" name="" value="2" onclick="calc.display.value+='2'">
+		    <input class="bg-black py-5 px-7 rounded text-3xl text-white cursor-pointer" type="button" name="" value="+" onclick="calc.display.value+='+'" style="background-color:#cc5c11;">
+        </div>
+		<div class="flex w-full justify-between py-5">
+			<input class="bg-black py-5 px-8 rounded text-3xl text-white cursor-pointer " type="button"  name="" value="3" onclick="calc.display.value+='3'" >
+			<input class="bg-black py-5 px-8 rounded text-3xl text-white cursor-pointer " type="button"  name="" value="4" onclick="calc.display.value+='4'" >
+			<input class="bg-black py-5 px-8 rounded text-3xl text-white cursor-pointer " type="button"  name="" value="5" onclick="calc.display.value+='5'" >
+			<input class="bg-black py-5 px-8 rounded text-3xl text-white cursor-pointer " type="button"  name="" value="-"  onclick="calc.display.value+='-'" style="background-color:#ba55d3;">
+		</div>
+		<div class="flex w-full justify-between">
+			<input class="bg-black py-5 px-8 rounded text-3xl text-white cursor-pointer " type="button"  name="" value="6" onclick="calc.display.value+='6'" >
+			<input class="bg-black py-5 px-8 rounded text-3xl text-white cursor-pointer " type="button"  name="" value="7" onclick="calc.display.value+='7'" >
+			<input class="bg-black py-5 px-8 rounded  text-3xl text-white cursor-pointer " type="button"  name="" value="8" onclick="calc.display.value+='8'" >
+			<input class="bg-black py-5 px-8 rounded text-white cursor-pointer " type="button"  name="" value="X"  onclick="calc.display.value+='*'" style="background-color:#7db1b2;">
+		</div>
+	    <br>
+		<div class="flex w-full justify-between  ">
+			<input class="bg-black py-5 px-8 rounded text-3xl text-white cursor-pointer " type="button"  name="" value="9" onclick="calc.display.value+='9'" >
+			<input class="bg-black py-5 px-8 rounded text-3xl text-white cursor-pointer " type="button"  name="" value="C"  style="background-color:#cc0000;" onclick="calc.display.value=''">
+			<input class="bg-rose-600 py-5 px-8 rounded text-3xl text-white cursor-pointer " type="button"  name="" value="=" onclick="riz()">
+			<input class=" py-5 px-8 rounded  text-white cursor-pointer " type="button"  name="" value="&#247"  onclick="calc.display.value+='/'"  style="background-color:green">
+		</div>
+	</form>
+	</div>
+
+	<script >
+		
+        
+
+
+
+		function riz() {
+          var result = document.getElementById('myinput').value;
+
+          if (result == 0) {
+               
+               document.getElementById('myinput').value = " ";
+
+          }
+          else{
+          	 document.getElementById('myinput').value = eval(calc.display.value);
+
+          	
+          }
+           
+        }
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>
